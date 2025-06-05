@@ -46,7 +46,8 @@ Bu proje, Kablosuz Sensör Ağlarındaki düğüm lokalizasyon problemini çözm
 **Sonuçlar:**
 
 - MAE (Mean Absolute Error) ve RMSE (Root Mean Squared Error)
-   <img src="mae_rmse.png" width="500" height="300">
+
+ <img src="mae_rmse.png" width="500" height="300">
 
 ## 📈 Sonuçlar Örneği
 
