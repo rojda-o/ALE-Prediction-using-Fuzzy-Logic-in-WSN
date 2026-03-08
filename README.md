@@ -1,55 +1,55 @@
 # ALE Prediction using Fuzzy Logic in WSN
 
-Bu proje, Kablosuz Sensör Ağlarındaki düğüm lokalizasyon problemini çözmek için Mamdani Bulanık Çıkarım Sistemi (FIS) geliştirilmiştir. Projede 4 farklı kombinasyon test edilerek ortalama lokalizasyon hatası (ALE) tahmin edilmiştir.
+This project develops a Mamdani Fuzzy Inference System (FIS) to solve the node localization problem in Wireless Sensor Networks (WSNs). Four different combinations were tested to predict the Average Localization Error (ALE).
 
 ## Proje Özeti
 
-- Amaç:
+- Objectives:
 
-  - 4 giriş parametresi (anchor ratio, transmission range, node density, iteration count) kullanılarak ALE’yi tahmin etmek
+  - Predict ALE using 4 input parameters: anchor ratio, transmission range, node density, and iteration count.
   
-  - 2 farklı üyelik fonksiyonu (Triangular & Gaussian) ve 2 defuzzification yöntemi (COS & WAM) kombinasyonlarını karşılaştırmak
+  - Compare combinations of 2 different membership functions (Triangular & Gaussian) and 2 defuzzification methods (Centroid/COS & Weighted Average/WAM).
   
-  - 25 adet mantıksal kural üzerinden bulanık çıkarım sistemi kurmak
+  - Establish a fuzzy inference system based on 25 logical rules.
 
-- Veri Seti:
+- Dataset:
 
-  - Toplam 107 gözlem
-  - mcs_ds_edited_iter_shuffled.csv dosyası
+  - Total Observations: 107
+  - File: mcs_ds_edited_iter_shuffled.csv 
  
-## 📊 Kullanılan Araçlar & Kütüphaneler
+##  Tools & Libraries
 
 - Python 3
-- `numpy`, `pandas` – Veri işleme
-- `matplotlib` – Grafik çizimi
-- `skfuzzy` – Bulanık mantık işlemleri
-- `scikit-learn` – MAE, RMSE hesaplamaları
+- `numpy`, `pandas` : Data processing
+- `matplotlib` : Data visualization
+- `skfuzzy` : Fuzzy logic operations
+- `scikit-learn` : Error metrics (MAE, RMSE) calculation
 
-## Temel Özellikler
+## Key Features
 
-**Üyelik Fonksiyonları:**
+**Membership Functions (MF):**
 
-- Tüm girişler ve çıkış için Triangular ve Gaussian MF’ler
+- Triangular and Gaussian MFs applied to all inputs and the output.
 
-**Kurallar:**
+**Rule Base:**
 
-- Veriye göre oluşturulmuş 25 mantıksal kural
+- 25 logical rules derived from the dataset.
 
-**Çıkarım & Defuzzification:**
+**Inference & Defuzzification:**
 
-- Mamdani sistem
+- Mamdani-style inference
 
-- 2 farklı berraklaştırma (COS & WAM)
+- Two distinct defuzzification methods: Centroid (COS) and Weighted Average (WAM).
 
-- Her kombinasyon için tahmin ve hata ölçümleri
+- Prediction and error measurements for every combination.
 
-**Sonuçlar:**
+**Performance Metrics:**
 
-- MAE (Mean Absolute Error) ve RMSE (Root Mean Squared Error)
+- MAE (Mean Absolute Error) and RMSE (Root Mean Squared Error)
 
  <img src="mae_rmse.png" width="500" height="300">
 
-## 📈 Sonuçlar Örneği
+## Example Resuslts
 
 | Kombinasyon          | MAE     | RMSE    |
 |-----------------------|---------|---------|
@@ -58,24 +58,23 @@ Bu proje, Kablosuz Sensör Ağlarındaki düğüm lokalizasyon problemini çözm
 | Gaussian + COS        | 0.21    | 0.29    |
 | Gaussian + WAM        | 0.21    | 0.29    |
 
-## 🖼️ Grafikler
+## Visualizations
 
-Girdi değişkenleri için **üçgensel ve gauss MF grafik** çizimi 
+The project generates Triangular and Gaussian MF plots for all input variables to visualize the degree of membership for each linguistic variable.
 
+## Execution Steps
 
-## 🛠️ Çalıştırma Adımları
-
-1️⃣ Gerekli kütüphaneleri yükle:
+1️⃣ Install the required libraries:
 ```bash
 pip install numpy pandas matplotlib scikit-fuzzy scikit-learn
 ```
-2️⃣ Python betiğini çalıştır:
+2️⃣ Run the Python script:
 ```
 python main.py
 ```
-3️⃣ Sonuçlar terminalde ve grafiklerde görüntülenir.
+3️⃣ Outputs will be displayed in the terminal and via generated plots.
 
-## Veri kümesi:
+## Dataset:
 
 [UCI WSN Localization Dataset](https://archive.ics.uci.edu/dataset/844/average+localization+error+(ale)+in+sensor+node+localization+process+in+wsns)
 
