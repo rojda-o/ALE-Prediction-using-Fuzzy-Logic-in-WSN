@@ -2,7 +2,7 @@
 
 This project develops a Mamdani Fuzzy Inference System (FIS) to solve the node localization problem in Wireless Sensor Networks (WSNs). Four different combinations were tested to predict the Average Localization Error (ALE).
 
-## Proje Özeti
+## Project Overview
 
 - Objectives:
 
